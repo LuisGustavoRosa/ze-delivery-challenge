@@ -28,7 +28,7 @@ public class PartnerController(IPartnerService partnerService) : Controller
         await partnerService.CreateAll(partnerDto);
         return Created();
     }
-    [HttpGet("nearest_partner")]
+    [HttpGet("nearest")]
     public async Task<IActionResult> GetNearestPartner(double lon, double lat) => Ok(await partnerService.GetNearestPartner(lon, lat));
 
 }
