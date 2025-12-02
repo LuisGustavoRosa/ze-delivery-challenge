@@ -1,7 +1,7 @@
 # ze-delivery-challenge
 
-## Descrição
-Desafio técnico para cadastro e busca de parceiros (PDVs) com área de cobertura geográfica, utilizando .NET 9.
+## DescriÃ§Ã£o
+Desafio tÃ©cnico para cadastro e busca de parceiros (PDVs) com Ã¡rea de cobertura geogrÃ¡fica, utilizando .NET 9.
 
 ## Requisitos
 - .NET 9
@@ -21,20 +21,20 @@ dotnet run --project ze-delivery-challenge/ze-delivery-challenge.csproj
 docker build -t ze-delivery-challenge .
 # Para conectar ao banco local, ajuste a string conforme seu banco
 # Exemplo para SQL Server local:
-docker run -p 8080:8080 -e ConnectionStrings__DefaultConnection="Server=10.0.0.120;Port=5432;Database=zedeliverychallenge;User Id=postgres;Password=postgres;" zedeliverychallenge
+docker run -p 8080:8080 -e ConnectionStrings__DefaultConnection="Server={{ip}};Port=5432;Database=zedeliverychallenge;User Id=postgres;Password=postgres;" zedeliverychallenge
 ```
 
 ## Endpoints principais
-- `POST /partners` — Cadastra um novo parceiro
-- `GET /partners` — Lista todos os parceiros
-- `GET /partners/{id}` — Busca parceiro por ID
-- `GET /partners/nearest?lng={longitude}&lat={latitude}` — Busca o parceiro mais próximo que cobre a localização
+- `POST /partners` â€” Cadastra um novo parceiro
+- `GET /partners` â€” Lista todos os parceiros
+- `GET /partners/{id}` â€” Busca parceiro por ID
+- `GET /partners/nearest?lng={longitude}&lat={latitude}` â€” Busca o parceiro mais prÃ³ximo que cobre a localizaÃ§Ã£o
 
 ## Exemplo de payload para cadastro
 ```json
 {
   "tradingName": "Adega da Cerveja - Pinheiros",
-  "ownerName": "Zé da Silva",
+  "ownerName": "ZÃ© da Silva",
   "document": "1432132123891/0001",
   "coverageArea": {
     "type": "MultiPolygon",
@@ -50,8 +50,8 @@ docker run -p 8080:8080 -e ConnectionStrings__DefaultConnection="Server=10.0.0.1
 }
 ```
 
-## Contribuição
-Pull requests são bem-vindos. Para grandes mudanças, abra uma issue primeiro para discutir o que você gostaria de modificar.
+## ContribuiÃ§Ã£o
+Pull requests sÃ£o bem-vindos. Para grandes mudanÃ§as, abra uma issue primeiro para discutir o que vocÃª gostaria de modificar.
 
-## Licença
+## LicenÃ§a
 MIT
